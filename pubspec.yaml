@@ -1,8 +1,8 @@
 name: jdsdk
-description: A new Flutter plugin.
+description: The implementation of Jingdong SDK on Flutter, through which you can realize the wake-up Jingdong app to open any URL of Jingdong, including product details and other functions.
 version: 0.0.1
-author:
-homepage:
+author: wuchaowen <chaowen1110@gmail.com>
+homepage: https://github.com/selfimgr/flutter_jdsdk.git
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
