@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - jdsdk (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - jdsdk (from `.symlinks/plugins/jdsdk/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  jdsdk:
+    :path: ".symlinks/plugins/jdsdk/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  jdsdk: 2ca38c7e3a2dfb0f3641425f8fd1e8d20357693f
+
+PODFILE CHECKSUM: 5f3453128823cf0ac1f2bf98c4325c586526ba0b
+
+COCOAPODS: 1.8.4

@@ -1,0 +1,55 @@
+group 'com.jd.jdsdk'
+version '1.0'
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.0'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 16
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+
+    sourceSets{
+        main{
+            jniLibs.srcDirs = ['src/libs']
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dexOptions {
+        incremental true
+    }
+}
+
+dependencies{
+    //implementation files('src/libs/jdmasdk.jar')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation files('src/libs/JDSDK_h.jar')
+    implementation files('src/libs/cps_1.0.0.jar')
+}
