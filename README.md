@@ -26,22 +26,26 @@
     	</array>
  ```
 
+## 导入依赖
+```dart
+  import 'package:jdsdk/jdsdk.dart';
+```
+
+
 ## 初始化
 ```dart
- import 'package:jdsdk/jdsdk.dart';
- await Jdsdk.init(appKey: '', appSecret: '');
+
+  Jdsdk.init(appKey: '', appSecret: '');
 ```
 
 
 ## 打开京东任意URL
 ```dart
- import 'package:jdsdk/jdsdk.dart';
- await Jdsdk.openUrl( url: 'https://item.m.jd.com/product/100009963992.html');
+  Jdsdk.openUrl( url: 'https://item.m.jd.com/product/100009963992.html');
 ```
 
 
-## 联系方式
-QQ：`511644784`
+
 
 
 
