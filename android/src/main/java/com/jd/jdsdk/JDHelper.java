@@ -136,13 +136,11 @@ public class JDHelper {
         KeplerApiManager.asyncInitSdk(getActivity().getApplication(), appKey, appSecret, new AsyncInitListener() {
             @Override
             public void onSuccess() {
-                Toast.makeText(getActivity(),"success",Toast.LENGTH_SHORT).show();
                 result.success(PluginResponse.success(null).toMap());
             }
 
             @Override
             public void onFailure() {
-                Toast.makeText(getActivity(),"fail",Toast.LENGTH_SHORT).show();
                 String errorCode = "-1";
                 String errorMsg = "初始化失败";
                 result.success(new PluginResponse(errorCode, errorMsg, null).toMap());
@@ -165,7 +163,6 @@ public class JDHelper {
                 url,
                 mKeplerAttachParameter,
                 mOpenAppAction);
-        Toast.makeText(getActivity(),"success",Toast.LENGTH_SHORT).show();
     }
 
 }
