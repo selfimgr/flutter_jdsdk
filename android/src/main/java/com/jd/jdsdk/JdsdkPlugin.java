@@ -1,6 +1,5 @@
 package com.jd.jdsdk;
 
-import android.support.annotation.NonNull;
 import android.util.Log;
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
@@ -16,7 +15,7 @@ import io.flutter.plugin.common.PluginRegistry.Registrar;
 public class JdsdkPlugin implements FlutterPlugin, MethodCallHandler, ActivityAware {
   public static JDHelper mJDHelper;
   @Override
-  public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
+  public void onAttachedToEngine( FlutterPluginBinding flutterPluginBinding) {
     final MethodChannel channel = new MethodChannel(flutterPluginBinding.getFlutterEngine().getDartExecutor(), "jdsdk");
     channel.setMethodCallHandler(new JdsdkPlugin());
   }
@@ -29,7 +28,7 @@ public class JdsdkPlugin implements FlutterPlugin, MethodCallHandler, ActivityAw
   }
 
   @Override
-  public void onMethodCall(@NonNull MethodCall call, @NonNull Result result) {
+  public void onMethodCall( MethodCall call,  Result result) {
     if (call.method.equals("getPlatformVersion")) {
       result.success("Android " + android.os.Build.VERSION.RELEASE);
     } else if (call.method.equals("init")) {
@@ -43,11 +42,11 @@ public class JdsdkPlugin implements FlutterPlugin, MethodCallHandler, ActivityAw
   }
 
   @Override
-  public void onDetachedFromEngine(@NonNull FlutterPluginBinding binding) {
+  public void onDetachedFromEngine( FlutterPluginBinding binding) {
   }
 
   @Override
-  public void onAttachedToActivity(@NonNull ActivityPluginBinding binding) {
+  public void onAttachedToActivity( ActivityPluginBinding binding) {
     Log.d("flutter-taoke","onAttachedToActivity"+binding);
     mJDHelper = JDHelper.getInstance(binding);
   }
@@ -58,7 +57,7 @@ public class JdsdkPlugin implements FlutterPlugin, MethodCallHandler, ActivityAw
   }
 
   @Override
-  public void onReattachedToActivityForConfigChanges(@NonNull ActivityPluginBinding binding) {
+  public void onReattachedToActivityForConfigChanges( ActivityPluginBinding binding) {
 
   }
 
